@@ -1,26 +1,31 @@
-class Chat {
+/**
+ * Mon objet chat
+ */
+interface Chat {
+  // Attributs
   nom: string;
   race: string;
   age: number;
-  poid: number;
-
-  constructor(nom: string, race: string, age: number, poid: number) {
-    this.nom = "Tchoupi";
-    this.race = "Maine Coon";
-    this.age = 3;
-    this.poid = 2.5;
-  }
+  poids: number;
+}
+let chat = {
+  nom: "Zack",
+  race: "Maine Coon",
+  age: 3,
+  poids: 2.55,
 }
 
-function information(chat: Chat, surnom: string[]) {
-  for (let v of surnom) {
-    return `informations sur les chats :
-    surnom: ${v},
-    nom : ${chat.nom},
-    race : ${chat.race},
-    age : ${chat.age},
-    poid : ${chat.poid} 
-    `;
-  }
-  console.log(Chat,"Choupi","Pipi");
+/**
+ * Affichage des informations
+ * @param {Chat} chat 
+ * @param {String[]} surnoms 
+ * @returns {String}
+ */
+function chatDetails(chat: Chat, surnoms: string[]): string {
+  return `Informations concernant mon chat:\n-Nom: ${chat.nom}\n-Race: ${chat.race}\n-Âge: ${chat.age} ans\n-Poids: ${chat.poids} Kg\n\n-Surnoms: ${surnoms}\n`;
 }
+
+/**
+ * Log dans la console de la fonction chatDetails() accompagné de la liste des surnoms
+ */
+console.log(chatDetails(chat,["Zackinou", "Sozack", "Garfield (parce que c'est un gros sac)"]));
