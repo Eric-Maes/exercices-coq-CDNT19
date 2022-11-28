@@ -3,4 +3,3 @@ function wtf() {
 }
 
 console.log(wtf());
-
