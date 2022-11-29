@@ -1,4 +1,4 @@
-class newChat {
+class Chat {
     private _nom: string;
     private _race: string;
     private _age: number;
@@ -38,14 +38,11 @@ class newChat {
     }
 
     displayChat = (...surnoms) => {
-        // console.log(`${this.nom} ${this.age} ${this.race} ${this.poids}`)
         console.log("Surnom(s) : ")
         console.log(surnoms)
     }
 }
 
-// const Choupi: newChat = new newChat("Choupi", "Maine Coon", 3, 2.55)
-// Choupi.displayChat("a", "b")
-const monChat = new newChat("Tchoupi", "Maine Coon", 3, 2.55);
-console.log(monChat.nom, monChat.race, monChat.age, monChat.poids)
-monChat.displayChat("Surnom 1", "Surnom 2")
+const chat = new Chat("Tchoupi", "Maine Coon", 3, 2.55);
+console.log(chat.nom, chat.race, chat.age, chat.poids)
+chat.displayChat("Surnom 1", "Surnom 2")
